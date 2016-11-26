@@ -1,6 +1,5 @@
 language: r
 r:
-  - release
-
+  - 3.3.2
 cache: packages
-sudo: required
+sudo: false
