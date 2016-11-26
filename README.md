@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/SteveLane/elicitatoR.svg?branch=master)](https://travis-ci.org/SteveLane/elicitatoR)
+
 # elicitatoR: Aggregation of Distributions from Expert Elicitation
 
 `elicitatoR` is a package designed to aggregate expert elicitations into a single *wisdom of the crowd* distribution. At present, `elicitatoR` is set to combine elicitations resulting from the **IDEA** protocol (Hanea et al., 2016).
