@@ -10,4 +10,4 @@ The goal of this package is to eventually provide an online interface to collect
 
 ## References
 
-Hanea, A. M., McBride, M. F., Burgman, M. A., Wintle, B. C., Fidler, F., Flander, L., … Mascaro, S. (n.d.). I nvestigate D iscuss E stimate A ggregate for structured expert judgement. International Journal of Forecasting. (https://doi.org/10.1016/j.ijforecast.2016.02.008)[https://doi.org/10.1016/j.ijforecast.2016.02.008]
+Hanea, A. M., McBride, M. F., Burgman, M. A., Wintle, B. C., Fidler, F., Flander, L., … Mascaro, S. (n.d.). I nvestigate D iscuss E stimate A ggregate for structured expert judgement. International Journal of Forecasting. [https://doi.org/10.1016/j.ijforecast.2016.02.008](https://doi.org/10.1016/j.ijforecast.2016.02.008)
