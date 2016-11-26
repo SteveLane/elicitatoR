@@ -1,3 +1,6 @@
 language: r
+r:
+  - release
+
 cache: packages
 sudo: required
