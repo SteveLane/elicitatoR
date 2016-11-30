@@ -11,4 +11,5 @@ Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
 Imports: DBI,
-    RSQLite
+    RSQLite,
+    shiny
