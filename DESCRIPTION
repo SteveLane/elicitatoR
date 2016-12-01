@@ -16,5 +16,7 @@ VignetteBuilder: knitr
 Imports:
     DBI,
     RSQLite,
-    shiny
+    shiny,
+    DT,
+    shinyjs
 RoxygenNote: 5.0.1
