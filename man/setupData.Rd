@@ -10,7 +10,8 @@ setupData(dbName)
 \item{dbName}{The name of the database to store the elicitations in.}
 }
 \value{
-No object is returned, the database is created.
+No object is returned, the database is created. Note: the database is
+    created in the data directory (which is created if it doesn't exist).
 }
 \description{
 \code{setupData} Sets up a new database to store the expert elicitations in.
