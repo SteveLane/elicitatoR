@@ -12,7 +12,7 @@ setupData <- function(dbName){
     }
     myDB <- DBI::dbConnect(RSQLite::SQLite(),
                            paste0("data/", dbName, ".sqlite"))
-    DBI::dbSendQuery(myDB,
-                     "CREATE TABLE elicitations (round INTEGER, expert TEXT, best_guess DOUBLE, lower DOUBLE, upper DOUBLE, confidence DOUBLE)")
+    DBI::dbGetQuery(myDB,
+                    "CREATE TABLE elicitations (round INTEGER, expert TEXT, best_guess DOUBLE, lower DOUBLE, upper DOUBLE, confidence DOUBLE)")
     DBI::dbDisconnect(myDB)
 }
