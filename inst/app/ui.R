@@ -8,6 +8,8 @@ library(shiny)
 shinyUI(fluidPage(
     sidebarLayout(
         sidebarPanel(
+            textInput("dbName", "Database name", ""),
+            actionButton("submitDBName", "Submit"),
             textInput("round", "Round", ""),
             textInput("expert", "Expert", ""),
             numericInput("best_guess", "Best guess", "", min = 0, max = 1),
