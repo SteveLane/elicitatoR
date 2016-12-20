@@ -10,14 +10,15 @@ shinyUI(fluidPage(
         sidebarPanel(
             textInput("dbName", "Database name", ""),
             actionButton("submitDBName", "Submit"),
-            textInput("round", "Round", ""),
-            textInput("expert", "Expert", ""),
-            numericInput("best_guess", "Best guess", "", min = 0, max = 1),
-            numericInput("lower", "Lower limit", "", min = 0, max = 1),
-            numericInput("upper", "Upper limit", "", min = 0, max = 1),
-            numericInput("confidence", "Confidence", "", min = 0, max = 1),
-            actionButton("submit", "Submit")
-        ),
+            div(id = "form",
+                textInput("round", "Round", ""),
+                textInput("expert", "Expert", ""),
+                numericInput("best_guess", "Best guess", "", min = 0, max = 1),
+                numericInput("lower", "Lower limit", "", min = 0, max = 1),
+                numericInput("upper", "Upper limit", "", min = 0, max = 1),
+                numericInput("confidence", "Confidence", "", min = 0, max = 1),
+                actionButton("submit", "Submit")
+                )),
         mainPanel(
             DT::dataTableOutput("responses")
         )
