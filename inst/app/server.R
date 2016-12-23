@@ -45,6 +45,11 @@ shinyServer(function(input, output, session) {
     observeEvent(input$submit, {
         fitPars <- fitOpt(formData())
         saveData(cbind.data.frame(formData(), fitPars), input[["dbName"]])
+        ## Plot the last entered individual data.
+        output$plotInd <- renderPlot({
+            plot(function(p) dbeta(p, fitPars$alpha, fitPars$beta),
+                 from = 0, to = 1, bty = "l")
+        })
         shinyjs::reset("form")
     })
 
@@ -64,4 +69,5 @@ shinyServer(function(input, output, session) {
                                scrollX = TRUE)
             )
     })
+        
 })

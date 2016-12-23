@@ -20,7 +20,21 @@ shinyUI(fluidPage(
                 actionButton("submit", "Submit")
                 )),
         mainPanel(
-            DT::dataTableOutput("responses")
+            tabsetPanel(
+                id = "mainTabs", type = "tabs",
+                tabPanel(
+                    title = "Elicited plot",
+                    id = "elicitedPlot", value = "elicitedPlot", br(),
+                    div(id = "indPlot",
+                        plotOutput("plotInd"))
+                ),
+                tabPanel(
+                    title = "Elicited responses",
+                    id = "elicitedTab", value = "elicitedTab", br(),
+                    div(id = "responsesTable",
+                        DT::dataTableOutput("responses"))
+                )
+            )
         )
     ),
     shinyjs::useShinyjs()
