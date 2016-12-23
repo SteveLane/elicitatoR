@@ -1,6 +1,6 @@
 Package: elicitatoR
 Title: Aggregation of Distributions from Expert Elicitation
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: person("Steve", "Lane", email = "lane.s@unimelb.edu.au", role = c("aut", "cre"))
 Description: This package combines expert elicitations into an aggregate
     distribution for input into probabilistic models (for example).
