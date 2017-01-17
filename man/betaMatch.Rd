@@ -4,10 +4,10 @@
 \alias{betaMatch}
 \title{Beta matching for expert elicitations}
 \usage{
-betaMatch(pars, elicited)
+betaMatch(par, elicited)
 }
 \arguments{
-\item{pars}{Target of optimisation; not set by user.}
+\item{par}{Target of optimisation; not set by user.}
 
 \item{elicited}{Data frame of elicited values.}
 }
