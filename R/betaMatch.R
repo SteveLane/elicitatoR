@@ -3,7 +3,7 @@
 #' \code{betaMatch} This is the minimisation function for fitting a beta
 #' distribution to expert elicited data using the IDEA protocol.
 #'
-#' @param pars Target of optimisation; not set by user.
+#' @param par Target of optimisation; not set by user.
 #' @param elicited Data frame of elicited values.
 #' @return No object is returned.
 
