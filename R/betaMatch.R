@@ -7,19 +7,22 @@
 #' @param elicited Data frame of elicited values.
 #' @return No object is returned.
 
-betaMatch <- function(pars, elicited){
-    a <- exp(pars[1])
-    b <- exp(pars[2])
+betaMatch <- function(par, elicited){
+    b <- exp(par)
+    a <- (elicited[["best_guess"]] * (2 - b) - 1) /
+        (elicited[["best_guess"]] - 1)
     lp <- (1 - elicited[["confidence"]])/2
     up <- (1 - elicited[["confidence"]])/2 + elicited[["confidence"]]
     ll <- pbeta(elicited[["lower"]], a, b)
     ul <- pbeta(elicited[["upper"]], a, b)
-    mode <- (a - 1) / (a + b - 2)
-    (ll - lp)^2 + (ul - up)^2 + (mode - elicited[["best_guess"]])^2
+    (ll - lp)^2 + (ul - up)^2
 }
 
 fitOpt <- function(data){
-    ps <- optim(runif(2, 0, 4), betaMatch, elicited = data,
+    ps <- optim(runif(1, 0, 4), betaMatch, elicited = data,
                 method = "L-BFGS-B", lower = 0)
-    data.frame(alpha = exp(ps$par[1]), beta = exp(ps$par[2]))
+    b <- exp(ps$par)
+    a <- (data[["best_guess"]] * (2 - b) - 1) /
+        (data[["best_guess"]] - 1)
+    data.frame(alpha = a, beta = b)
 }
