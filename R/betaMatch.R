@@ -6,9 +6,6 @@
 #' @param par Target of optimisation; not set by user.
 #' @param elicited Data frame of elicited values.
 #' @return No object is returned.
-#'
-#' @export elicitatoR
-#' @export fitOpt
 
 betaMatch <- function(par, elicited){
     b <- exp(par)
